@@ -164,6 +164,7 @@ const defaultTheme: Theme = {
 
     // 行内代码
     code: {
+      'font-size': `12px`,
       'margin': 0,
       'white-space': `nowrap`,
       'font-family': `Menlo, Operator Mono, Consolas, Monaco, monospace`,
@@ -220,12 +221,14 @@ const defaultTheme: Theme = {
   inline: {
     listitem: {
       'text-indent': `-1em`,
+      'letter-spacing': `0.1em`,
       'display': `block`,
       'margin': `0.2em 8px`,
       'color': `hsl(var(--foreground))`,
     },
 
     codespan: {
+      'font-family': `Menlo, Operator Mono, Consolas, Monaco, monospace`,
       'font-size': `90%`,
       'color': `#d14`,
       'background': `rgba(27,31,35,.05)`,
@@ -392,6 +395,7 @@ const graceTheme = toMerged(defaultTheme, {
     },
 
     codespan: {
+      'font-family': `'Fira Code', Menlo, Operator Mono, Consolas, Monaco, monospace`,
     },
 
     em: {

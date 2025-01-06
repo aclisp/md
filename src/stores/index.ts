@@ -60,9 +60,9 @@ export const useStore = defineStore(`store`, () => {
     themeOptions[0].value,
   )
   // 文本字体
-  const fontFamily = useStorage(`fonts`, fontFamilyOptions[0].value)
+  const fontFamily = useStorage(`fonts`, fontFamilyOptions[1].value)
   // 文本大小
-  const fontSize = useStorage(`size`, fontSizeOptions[2].value)
+  const fontSize = useStorage(`size`, fontSizeOptions[4].value)
   // 主色
   const primaryColor = useStorage(`color`, colorOptions[0].value)
   // 代码块主题
@@ -391,9 +391,8 @@ export const useStore = defineStore(`store`, () => {
     isCountStatus.value = false
 
     theme.value = themeOptions[0].value
-    fontFamily.value = fontFamilyOptions[0].value
-    fontFamily.value = fontFamilyOptions[0].value
-    fontSize.value = fontSizeOptions[2].value
+    fontFamily.value = fontFamilyOptions[1].value
+    fontSize.value = fontSizeOptions[4].value
     primaryColor.value = colorOptions[0].value
     codeBlockTheme.value = codeBlockThemeOptions[23].value
     legend.value = legendOptions[3].value

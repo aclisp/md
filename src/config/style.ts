@@ -8,7 +8,7 @@ export const fontFamilyOptions: IConfigOption[] = [
   },
   {
     label: `衬线`,
-    value: `Optima-Regular, Optima, PingFangSC-light, PingFangTC-light, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif`,
+    value: `Optima-Regular, Optima, 'Microsoft YaHei', PingFangSC-regular, PingFangTC-regular, 'PingFang SC', Cambria, Cochin, Georgia, Times, 'Times New Roman', serif`,
     desc: `字体123Abc`,
   },
   {
@@ -47,6 +47,11 @@ export const fontSizeOptions: IConfigOption[] = [
 ]
 
 export const colorOptions: IConfigOption[] = [
+  {
+    label: `Directus`,
+    value: `#6644FFDE`,
+    desc: `Directus`,
+  },
   {
     label: `经典蓝`,
     value: `#0F4C81`,

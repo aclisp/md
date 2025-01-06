@@ -3,16 +3,15 @@
   "type": "module",
   "version": "1.6.0",
   "private": false,
+  "packageManager": "pnpm@9.15.3",
   "scripts": {
-    "start": "npm run dev",
     "dev": "vite --host",
     "build": "run-p type-check \"build:only {@}\" --",
     "build:only": "vite build",
     "build:h5-netlify": "run-p type-check \"build:h5-netlify:only {@}\" --",
     "build:h5-netlify:only": "cross-env SERVER_ENV=NETLIFY vite build",
-    "build:cli": "npm run build && npx shx rm -rf md-cli/dist && npx shx rm -rf dist/**/*.map && npx shx cp -r dist md-cli/ && cd md-cli && npm pack",
     "build:analyze": "cross-env ANALYZE=true vite build",
-    "preview": "npm run build && vite preview",
+    "preview": "vite preview",
     "release:cli": "node ./scripts/release.js",
     "ext:dev": "wxt",
     "ext:zip": "wxt zip",
@@ -42,10 +41,12 @@
     "front-matter": "^4.0.2",
     "highlight.js": "^11.11.1",
     "juice": "^11.0.0",
+    "linkedom": "^0.18.9",
     "lucide-vue-next": "^0.473.0",
     "marked": "^15.0.6",
     "mermaid": "^11.6.0",
     "node-fetch": "^3.3.2",
+    "ohash": "^1.1.4",
     "pinia": "^3.0.1",
     "qiniu-js": "^3.4.2",
     "radix-vue": "^1.9.12",
@@ -74,7 +75,6 @@
     "eslint": "^9.23.0",
     "eslint-plugin-format": "^0.1.2",
     "less": "^4.2.2",
-    "npm-run-all": "^4.1.5",
     "postcss": "^8.5.1",
     "prettier": "3.3.3",
     "rollup-plugin-visualizer": "^5.12.0",
@@ -92,10 +92,5 @@
     "vue-tsc": "^2.2.0",
     "wxt": "^0.19.29"
   },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
-  },
-  "lint-staged": {
-    "*": "npm run lint"
-  }
+  "simple-git-hooks": {}
 }
